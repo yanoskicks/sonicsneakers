@@ -211,7 +211,7 @@
           <div class="relative group">
             <div class="text-dark font-black tracking-tighter text-7xl mb-6 opacity-40 group-hover:opacity-100 transition-opacity">01</div>
             <h3 class="text-xl font-black uppercase tracking-widest mb-3">Find Your Pair</h3>
-            <p class="text-dark/80 font-medium text-sm leading-relaxed">Browse our live catalogue below. Use the filters to search by brand or model to find exactly what you're looking for.</p>
+            <p class="text-dark/80 font-medium text-sm leading-relaxed">Browse our live catalogue below. Use the filters to search by brand, model, or price to find exactly what you're looking for.</p>
           </div>
           <div class="relative group">
             <div class="text-dark font-black tracking-tighter text-7xl mb-6 opacity-40 group-hover:opacity-100 transition-opacity">02</div>
@@ -252,7 +252,7 @@
             </div>
 
             <!-- Dropdowns -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-6">
               <div class="flex flex-col gap-2">
                 <label class="text-[10px] font-black text-dark/50 uppercase tracking-[0.2em]">Brand</label>
                 <select id="brand" class="w-full bg-transparent border-b-2 border-dark/20 pb-2 text-sm font-bold text-dark outline-none appearance-none cursor-pointer hover:border-brand focus:border-brand transition-colors rounded-none"></select>
@@ -266,12 +266,24 @@
                 <select id="model" class="w-full bg-transparent border-b-2 border-dark/20 pb-2 text-sm font-bold text-dark outline-none appearance-none cursor-pointer hover:border-brand focus:border-brand transition-colors rounded-none"></select>
               </div>
               <div class="flex flex-col gap-2">
+                <label class="text-[10px] font-black text-dark/50 uppercase tracking-[0.2em]">Price</label>
+                <select id="priceFilter" class="w-full bg-transparent border-b-2 border-dark/20 pb-2 text-sm font-bold text-dark outline-none appearance-none cursor-pointer hover:border-brand focus:border-brand transition-colors rounded-none">
+                  <option value="all">All Prices</option>
+                  <option value="1300">R1,300</option>
+                  <option value="1400">R1,400</option>
+                  <option value="1500">R1,500</option>
+                  <option value="1600">R1,600</option>
+                </select>
+              </div>
+              <div class="flex flex-col gap-2">
                 <label class="text-[10px] font-black text-dark/50 uppercase tracking-[0.2em]">Sort By</label>
                 <select id="sort" class="w-full bg-transparent border-b-2 border-dark/20 pb-2 text-sm font-bold text-dark outline-none appearance-none cursor-pointer hover:border-brand focus:border-brand transition-colors rounded-none">
                   <option value="model_asc">Model (A–Z)</option>
                   <option value="model_desc">Model (Z–A)</option>
                   <option value="brand_asc">Brand (A–Z)</option>
                   <option value="brand_desc">Brand (Z–A)</option>
+                  <option value="price_asc">Price (Low to High)</option>
+                  <option value="price_desc">Price (High to Low)</option>
                 </select>
               </div>
             </div>
@@ -475,8 +487,49 @@
       brand: "all",
       category: "all",
       model: "all",
+      priceFilter: "all",
       sort: "model_asc",
       modal: { open: false, item: null, index: 0 },
+    };
+
+    // EXACT MATCH PRICING BASED ON YOUR CATALOG
+    const EXACT_PRICES = {
+      "nikeairjordan1": 1600,
+      "nikeairjordan3": 1600,
+      "nikeairjordan4": 1600,
+      "nikeairjordanmvp": 1600,
+      "adidasrivalryy3": 1500,
+      "adidassambarhinestone": 1500,
+      "nikeairmax1": 1400, // Updated to 1400
+      "nikeairmax95": 1500,
+      "nikeairmaxdn": 1500,
+      "nikeairmaxdrift": 1500,
+      "nikeairmaxplustn": 1500,
+      "nikeairmaxplustn3": 1500,
+      "nikeairmoreuptempo": 1500,
+      "nikelevisairmax95": 1500,
+      "nikeshoxr4": 1500,
+      "nikeshoxtl": 1500,
+      "nikezoomvomeroroam": 1500,
+      "glencyffelow": 1500,
+      "adidasadizeroevosl": 1400,
+      "nikep6000": 1400,
+      "nikevomero18": 1400,
+      "nikeairforce1": 1400,
+      "nikeairmaxfuryosa": 1400,
+      "nikedunk": 1400,
+      "nikemetcon5": 1400,
+      "nikemetcon6": 1400,
+      "nikemind001": 1400,
+      "nikemind002": 1600,
+      "nikezoomxalphafly3": 1400,
+      "nikeavarover": 1400,
+      "adidascampus00": 1300,
+      "adidasgazellebold": 1300,
+      "adidassambaog": 1300,
+      "nikecourtvisionalta": 1300,
+      "nikecortez": 1300,
+      "suedexl": 1400 // Updated to 1400
     };
 
     // EXACT CATEGORIES BASED ON YOUR CATALOG
@@ -511,6 +564,7 @@
       brand: document.getElementById("brand"),
       category: document.getElementById("category"),
       model: document.getElementById("model"),
+      priceFilter: document.getElementById("priceFilter"),
       grid: document.getElementById("grid"),
       empty: document.getElementById("empty"),
       emptyHintText: document.getElementById("emptyHintText"),
@@ -549,6 +603,7 @@
       els.brand.addEventListener("change", () => { state.brand = els.brand.value; hydrateModelOptions(); applyAndRender(); });
       els.category.addEventListener("change", () => { state.category = els.category.value; applyAndRender(); });
       els.model.addEventListener("change", () => { state.model = els.model.value; applyAndRender(); });
+      els.priceFilter.addEventListener("change", () => { state.priceFilter = els.priceFilter.value; applyAndRender(); });
       els.sort.addEventListener("change", () => { state.sort = els.sort.value; applyAndRender(); });
 
       els.clearBtn.addEventListener("click", clearAll);
@@ -571,8 +626,8 @@
 
     function clearAll() {
       state.q = ""; state.brand = "all"; state.category = "all";
-      state.model = "all"; state.sort = "model_asc";
-      els.q.value = ""; els.sort.value = state.sort;
+      state.model = "all"; state.priceFilter = "all"; state.sort = "model_asc";
+      els.q.value = ""; els.sort.value = state.sort; els.priceFilter.value = "all";
       hydrateFilters();
       applyAndRender();
       document.getElementById('catalogue').scrollIntoView({ behavior: 'smooth' });
@@ -602,6 +657,7 @@
         .map((x) => ({
           ...x,
           cover: x.cover || x.images[0],
+          price: getItemPrice(x),
           category: getItemCategory(x),
           search: `${x.brand} ${x.model} ${x.colorway} ${x.variant} ${getItemCategory(x)}`.toLowerCase(),
         }));
@@ -632,6 +688,7 @@
       state.category = els.category.value;
       hydrateModelOptions();
       els.sort.value = state.sort;
+      els.priceFilter.value = state.priceFilter;
     }
 
     function hydrateOptions(selectEl, optionsArray, currentValue, allLabel) {
@@ -660,6 +717,7 @@
       if (state.brand !== "all") list = list.filter((x) => x.brand === state.brand);
       if (state.category !== "all") list = list.filter((x) => x.category === state.category);
       if (state.model !== "all") list = list.filter((x) => x.model === state.model);
+      if (state.priceFilter !== "all") list = list.filter((x) => Number(x.price) === Number(state.priceFilter));
       if (q) list = list.filter((x) => x.search.includes(q));
 
       state.filtered = list.slice().sort(sorter(state.sort));
@@ -701,8 +759,8 @@
       const title = prettyModel(item.model);
       const subtitle = [prettyLabel(item.colorway), prettyVariant(item.variant)].filter(Boolean).join(" • ");
       const categoryText = item.category || "Uncategorized";
+      const priceText = item.price ? formatZar(item.price) : "POA";
 
-      // Product containers keep bg-[#FBFBFB] as explicitly requested. No Prices included.
       el.innerHTML = `
         <div class="relative w-full aspect-[4/5] bg-[#FBFBFB] flex items-center justify-center p-4 sm:p-8 overflow-hidden border-b-4 border-dark">
           <img class="w-full h-full object-contain mix-blend-multiply" src="${escapeAttr(item.cover)}" alt="${escapeAttr(title)}" loading="lazy" />
@@ -712,7 +770,11 @@
         </div>
         <div class="p-4 sm:p-6 flex-grow flex flex-col bg-white">
           <h3 class="text-base sm:text-xl font-black tracking-tighter text-dark leading-tight group-hover:text-brand transition-colors mb-2 truncate uppercase">${escapeHtml(title)}</h3>
-          <p class="text-[10px] sm:text-[11px] font-bold text-dark/50 uppercase tracking-widest line-clamp-1 sm:line-clamp-2">${escapeHtml(subtitle || "—")}</p>
+          <p class="text-[10px] sm:text-[11px] font-bold text-dark/50 uppercase tracking-widest line-clamp-1 sm:line-clamp-2 mb-4">${escapeHtml(subtitle || "—")}</p>
+          <div class="mt-auto flex items-center justify-between border-t-2 border-dark/5 pt-4">
+             <span class="text-lg sm:text-2xl font-black text-dark tracking-tighter">${escapeHtml(priceText)}</span>
+             <span class="text-[9px] font-black uppercase tracking-[0.2em] text-dark/40 group-hover:text-brand transition-colors">View</span>
+          </div>
         </div>
       `;
       return el;
@@ -724,11 +786,18 @@
       state.modal.index = 0;
       els.modal.setAttribute("aria-hidden", "false");
       
+      const priceText = item.price ? formatZar(item.price) : "POA";
+      
       els.modalTitle.innerHTML = `
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 w-full">
           <div class="truncate font-sans font-black tracking-tighter text-2xl sm:text-4xl text-dark uppercase">
             <span class="font-black text-[11px] tracking-[0.3em] uppercase block mb-1 text-brand bg-dark px-2 py-1 w-max shadow-[2px_2px_0_0_#91FF00]">${escapeHtml(item.brand)}</span> 
             ${escapeHtml(prettyModel(item.model))} <span class="font-bold text-dark/30 ml-1 sm:ml-2 text-xl sm:text-2xl">— ${escapeHtml(prettyLabel(item.colorway))}</span>
+          </div>
+          <div class="shrink-0 sm:mr-4 mt-2 sm:mt-0">
+             <span class="inline-block text-dark font-black text-3xl sm:text-5xl tracking-tighter">
+                ${escapeHtml(priceText)}
+             </span>
           </div>
         </div>`;
         
@@ -797,6 +866,8 @@
         model_desc: (a, b) => alpha(b.model, a.model) || alpha(b.brand, a.brand),
         brand_asc: (a, b) => alpha(a.brand, b.brand) || alpha(a.model, b.model),
         brand_desc: (a, b) => alpha(b.brand, a.brand) || alpha(b.model, a.model),
+        price_asc: (a, b) => Number(a.price || 999999) - Number(b.price || 999999),
+        price_desc: (a, b) => Number(b.price || 0) - Number(a.price || 0),
       };
       return by[mode] || by.model_asc;
     }
@@ -812,6 +883,12 @@
     function prettifyWords(s) { return String(s || "").replaceAll("_", " ").replaceAll("-", " ").replaceAll(/\s+/g, " ").replaceAll(/([a-z])([A-Z])/g, "$1 $2").replaceAll(/([A-Z])([A-Z][a-z])/g, "$1 $2").replaceAll(/([A-Za-z])(\d)/g, "$1 $2").replaceAll(/(\d)([A-Za-z])/g, "$1 $2"); }
     function titleCase(s) { return String(s || "").split(" ").filter(Boolean).map((w) => (w.length <= 2 ? w.toUpperCase() : w[0].toUpperCase() + w.slice(1).toLowerCase())).join(" "); }
     function canonical(s) { return String(s || "").toLowerCase().replace(/[^a-z0-9]/g, ""); }
+    function formatZar(amount) { return `R${Number(amount || 0).toLocaleString("en-ZA")}`; }
+
+    function getItemPrice(item) {
+      const model = canonical(item.model);
+      return EXACT_PRICES[model] || 1500; // 1500 safe fallback if you add a new unlisted model
+    }
 
     function getItemCategory(item) {
       const model = canonical(item.model);
