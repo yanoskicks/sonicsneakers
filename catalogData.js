@@ -1,8 +1,8 @@
 ﻿window.CATALOG_DATA = {
     "build":  {
-                  "generatedAt":  "2026-05-04T23:10:41.6902605+02:00",
+                  "generatedAt":  "2026-05-06T18:16:47.6504826+02:00",
                   "root":  "C:\\Users\\LenovoUser\\Desktop\\Sourceasneaker",
-                  "itemCount":  253
+                  "itemCount":  256
               },
     "items":  [
                   {
@@ -338,6 +338,46 @@
                       "images":  [
                                      "Adidas\\AdidasSambaRhinestone\\white\\1-removebg-preview (3).png",
                                      "Adidas\\AdidasSambaRhinestone\\white\\2.jpg"
+                                 ]
+                  },
+                  {
+                      "id":  "jackets|nike x nocta||black reversible",
+                      "brand":  "Jackets",
+                      "model":  "Nike x Nocta",
+                      "variant":  "",
+                      "colorway":  "Black Reversible",
+                      "cover":  "Jackets\\Nike x Nocta\\Black Reversible\\78B4BF2C-2394-464F-B5F8-7904FA10D016_1800x1800_a67ab529-e589-4620-b100-16983d5396f4_1800x1800.jpg",
+                      "images":  [
+                                     "Jackets\\Nike x Nocta\\Black Reversible\\78B4BF2C-2394-464F-B5F8-7904FA10D016_1800x1800_a67ab529-e589-4620-b100-16983d5396f4_1800x1800.jpg",
+                                     "Jackets\\Nike x Nocta\\Black Reversible\\9fb814.jpeg",
+                                     "Jackets\\Nike x Nocta\\Black Reversible\\photo_2_2026-05-06_15-54-49.jpg",
+                                     "Jackets\\Nike x Nocta\\Black Reversible\\photo_4_2026-05-06_15-54-49.jpg",
+                                     "Jackets\\Nike x Nocta\\Black Reversible\\photo_5_2026-05-06_15-54-49.jpg"
+                                 ]
+                  },
+                  {
+                      "id":  "jackets|nike x nocta||green reversible",
+                      "brand":  "Jackets",
+                      "model":  "Nike x Nocta",
+                      "variant":  "",
+                      "colorway":  "Green Reversible",
+                      "cover":  "Jackets\\Nike x Nocta\\Green Reversible\\photo_8_2026-05-06_15-54-49-removebg-preview (1).png",
+                      "images":  [
+                                     "Jackets\\Nike x Nocta\\Green Reversible\\photo_8_2026-05-06_15-54-49-removebg-preview (1).png"
+                                 ]
+                  },
+                  {
+                      "id":  "jackets|nike x nocta||yellow reversible",
+                      "brand":  "Jackets",
+                      "model":  "Nike x Nocta",
+                      "variant":  "",
+                      "colorway":  "Yellow Reversible",
+                      "cover":  "Jackets\\Nike x Nocta\\Yellow Reversible\\57aedb.jpeg",
+                      "images":  [
+                                     "Jackets\\Nike x Nocta\\Yellow Reversible\\57aedb.jpeg",
+                                     "Jackets\\Nike x Nocta\\Yellow Reversible\\NoctaReversiblePuffer_UniversityGold_1.webp",
+                                     "Jackets\\Nike x Nocta\\Yellow Reversible\\photo_10_2026-05-06_15-54-49.jpg",
+                                     "Jackets\\Nike x Nocta\\Yellow Reversible\\photo_7_2026-05-06_15-54-49.jpg"
                                  ]
                   },
                   {
