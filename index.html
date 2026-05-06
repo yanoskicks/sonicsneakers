@@ -532,7 +532,6 @@
       "nikemind002": 1600,
       "nikezoomxalphafly3": 1400,
       "nikeavarover": 1400,
-      "nikenoctajacket": 1300,
       "adidascampus00": 1300,
       "adidasgazellebold": 1300,
       "adidassambaog": 1300,
@@ -895,6 +894,7 @@
     function formatZar(amount) { return `R${Number(amount || 0).toLocaleString("en-ZA")}`; }
 
     function getItemPrice(item) {
+      if (canonical(item.brand) === "jackets") return 1400;
       const model = canonical(item.model);
       return EXACT_PRICES[model] || 1500; 
     }
