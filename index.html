@@ -144,7 +144,7 @@
             </h1>
             
             <p class="text-base sm:text-xl text-white/60 mb-12 max-w-2xl mx-auto leading-relaxed font-medium">
-              Shopping with Sonic Sneakers is easy. Pick your pair, DM us, and get it delivered fast via Postnet, Courier Guy, or book a <strong class="text-white">Cash on Delivery</strong> around Johannesburg.
+              Shopping with Sonic Sneakers is easy. Pick your pair, DM us, and get it delivered fast via Postnet, Courier Guy, or book <strong class="text-white">Cash on Delivery</strong> around Johannesburg.
             </p>
             
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -186,7 +186,7 @@
             <h3 class="font-black text-2xl text-white mb-4 tracking-tighter uppercase flex items-center gap-3">
               <span class="w-3 h-3 bg-brand rounded-full inline-block"></span> Delivery & COD
             </h3>
-            <p class="text-sm text-white/50 font-medium leading-relaxed"><strong>Cash on Delivery (COD)</strong> is available exclusively around Johannesburg (10% deposit secures your booking). Nationwide standard delivery takes 2-4 days via Courier Guy or PUDO.</p>
+            <p class="text-sm text-white/50 font-medium leading-relaxed"><strong>Cash on Delivery (COD)</strong> is available for clients based around Johannesburg. Nationwide standard delivery takes 2-4 days via Courier Guy or PUDO for other regions.</p>
           </div>
           <div class="md:px-12 pt-8 md:pt-0">
             <h3 class="font-black text-2xl text-white mb-4 tracking-tighter uppercase flex items-center gap-3">
@@ -228,7 +228,7 @@
           <div class="relative group">
             <div class="text-dark font-black tracking-tighter text-7xl mb-6 opacity-40 group-hover:opacity-100 transition-opacity">03</div>
             <h3 class="text-xl font-black uppercase tracking-widest mb-3">Unbox & Flex</h3>
-            <p class="text-dark/80 font-medium text-sm leading-relaxed">Book a JHB COD with a 10% deposit (pay the 90% balance on delivery), or make a secure EFT for courier delivery.</p>
+            <p class="text-dark/80 font-medium text-sm leading-relaxed">Pay via cash or EFT on delivery for JHB clients, or choose secure EFT for nationwide courier delivery.</p>
           </div>
         </div>
       </div>
@@ -344,8 +344,7 @@
               </span>
             </summary>
             <div class="p-4 pt-0 text-white/60 font-medium text-sm leading-relaxed border-t border-white/5 mt-2 space-y-3">
-              <p>We offer exclusive <strong class="text-brand">Cash on Delivery (COD)</strong> for clients based around Johannesburg. To book a COD, we require a <strong>10% upfront deposit</strong>, with the remaining 90% balance paid in cash or immediate EFT upon delivery.</p>
-              <p><em>Why the deposit?</em> This small commitment helps us filter out non-serious buyers, ensuring we protect the time and resources required to pull stock from our warehouse, prep your order, and dispatch our delivery drivers safely.</p>
+              <p>We offer <strong class="text-brand">Cash on Delivery (COD)</strong> for clients based around Johannesburg. You can pay via cash or immediate EFT upon delivery once you have inspected your pair.</p>
               <p>For the rest of SA, standard nationwide delivery via Courier Guy (to your door or a PUDO locker) takes 2-4 working days once full payment clears.</p>
             </div>
           </details>
@@ -509,7 +508,7 @@
       "nikeairjordanmvp": 1600,
       "adidasrivalryy3": 1500,
       "adidassambarhinestone": 1500,
-      "nikeairmax1": 1400, // Updated to 1400
+      "nikeairmax1": 1400, 
       "nikeairmax95": 1500,
       "nikeairmaxdn": 1500,
       "nikeairmaxdrift": 1500,
@@ -533,12 +532,13 @@
       "nikemind002": 1600,
       "nikezoomxalphafly3": 1400,
       "nikeavarover": 1400,
+      "nikenoctajacket": 1300,
       "adidascampus00": 1300,
       "adidasgazellebold": 1300,
       "adidassambaog": 1300,
       "nikecourtvisionalta": 1300,
       "nikecortez": 1300,
-      "suedexl": 1400 // Updated to 1400
+      "suedexl": 1400 
     };
 
     // EXACT CATEGORIES BASED ON YOUR CATALOG
@@ -896,12 +896,12 @@
 
     function getItemPrice(item) {
       const model = canonical(item.model);
-      return EXACT_PRICES[model] || 1500; // 1500 safe fallback if you add a new unlisted model
+      return EXACT_PRICES[model] || 1500; 
     }
 
     function getItemCategory(item) {
       const model = canonical(item.model);
-      return EXACT_CATEGORIES[model] || "Modern Lifestyle"; // Default category
+      return EXACT_CATEGORIES[model] || "Modern Lifestyle"; 
     }
   </script>
 </body>
