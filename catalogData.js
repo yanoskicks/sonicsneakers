@@ -1,6 +1,6 @@
 ﻿window.CATALOG_DATA = {
     "build":  {
-                  "generatedAt":  "2026-05-06T18:16:47.6504826+02:00",
+                  "generatedAt":  "2026-05-06T18:19:53.1978326+02:00",
                   "root":  "C:\\Users\\LenovoUser\\Desktop\\Sourceasneaker",
                   "itemCount":  256
               },
@@ -372,11 +372,11 @@
                       "model":  "Nike x Nocta",
                       "variant":  "",
                       "colorway":  "Yellow Reversible",
-                      "cover":  "Jackets\\Nike x Nocta\\Yellow Reversible\\57aedb.jpeg",
+                      "cover":  "Jackets\\Nike x Nocta\\Yellow Reversible\\1.jpg",
                       "images":  [
+                                     "Jackets\\Nike x Nocta\\Yellow Reversible\\1.jpg",
                                      "Jackets\\Nike x Nocta\\Yellow Reversible\\57aedb.jpeg",
                                      "Jackets\\Nike x Nocta\\Yellow Reversible\\NoctaReversiblePuffer_UniversityGold_1.webp",
-                                     "Jackets\\Nike x Nocta\\Yellow Reversible\\photo_10_2026-05-06_15-54-49.jpg",
                                      "Jackets\\Nike x Nocta\\Yellow Reversible\\photo_7_2026-05-06_15-54-49.jpg"
                                  ]
                   },
