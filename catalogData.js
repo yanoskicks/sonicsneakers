@@ -1,8 +1,8 @@
 ﻿window.CATALOG_DATA = {
     "build":  {
-                  "generatedAt":  "2026-05-06T18:19:53.1978326+02:00",
+                  "generatedAt":  "2026-05-09T23:21:09.0448295+02:00",
                   "root":  "C:\\Users\\LenovoUser\\Desktop\\Sourceasneaker",
-                  "itemCount":  256
+                  "itemCount":  268
               },
     "items":  [
                   {
@@ -2959,6 +2959,144 @@
                                      "TheNorthFace\\Glencyffe-Low\\white-dune\\0.png",
                                      "TheNorthFace\\Glencyffe-Low\\white-dune\\1.png",
                                      "TheNorthFace\\Glencyffe-Low\\white-dune\\photo_28_2026-04-26_23-04-23.jpg"
+                                 ]
+                  },
+                  {
+                      "id":  "tracksuits|nike tech fleece||black",
+                      "brand":  "Tracksuits",
+                      "model":  "Nike Tech Fleece",
+                      "variant":  "",
+                      "colorway":  "black",
+                      "cover":  "Tracksuits\\Nike Tech Fleece\\black\\siyah2.jpg",
+                      "images":  [
+                                     "Tracksuits\\Nike Tech Fleece\\black\\siyah2.jpg"
+                                 ]
+                  },
+                  {
+                      "id":  "tracksuits|nike tech fleece||brown",
+                      "brand":  "Tracksuits",
+                      "model":  "Nike Tech Fleece",
+                      "variant":  "",
+                      "colorway":  "brown",
+                      "cover":  "Tracksuits\\Nike Tech Fleece\\brown\\0.jpg",
+                      "images":  [
+                                     "Tracksuits\\Nike Tech Fleece\\brown\\0.jpg",
+                                     "Tracksuits\\Nike Tech Fleece\\brown\\1.jpg",
+                                     "Tracksuits\\Nike Tech Fleece\\brown\\2.jpg",
+                                     "Tracksuits\\Nike Tech Fleece\\brown\\3.jpg"
+                                 ]
+                  },
+                  {
+                      "id":  "tracksuits|nike tech fleece||game blue",
+                      "brand":  "Tracksuits",
+                      "model":  "Nike Tech Fleece",
+                      "variant":  "",
+                      "colorway":  "game blue",
+                      "cover":  "Tracksuits\\Nike Tech Fleece\\game blue\\nike_HV0949-480_M-065.jpg",
+                      "images":  [
+                                     "Tracksuits\\Nike Tech Fleece\\game blue\\nike_HV0949-480_M-065.jpg"
+                                 ]
+                  },
+                  {
+                      "id":  "tracksuits|nike tech fleece||green",
+                      "brand":  "Tracksuits",
+                      "model":  "Nike Tech Fleece",
+                      "variant":  "",
+                      "colorway":  "green",
+                      "cover":  "Tracksuits\\Nike Tech Fleece\\green\\126006_1.jpg",
+                      "images":  [
+                                     "Tracksuits\\Nike Tech Fleece\\green\\126006_1.jpg"
+                                 ]
+                  },
+                  {
+                      "id":  "tracksuits|nike tech fleece||grey",
+                      "brand":  "Tracksuits",
+                      "model":  "Nike Tech Fleece",
+                      "variant":  "",
+                      "colorway":  "grey",
+                      "cover":  "Tracksuits\\Nike Tech Fleece\\grey\\s-l1200.png",
+                      "images":  [
+                                     "Tracksuits\\Nike Tech Fleece\\grey\\s-l1200.png"
+                                 ]
+                  },
+                  {
+                      "id":  "tracksuits|nike tech fleece||grey white",
+                      "brand":  "Tracksuits",
+                      "model":  "Nike Tech Fleece",
+                      "variant":  "",
+                      "colorway":  "grey white",
+                      "cover":  "Tracksuits\\Nike Tech Fleece\\grey white\\main-square_866864aa-3e8d-45b5-bf4b-1f6e076074ce.jpg",
+                      "images":  [
+                                     "Tracksuits\\Nike Tech Fleece\\grey white\\main-square_866864aa-3e8d-45b5-bf4b-1f6e076074ce.jpg"
+                                 ]
+                  },
+                  {
+                      "id":  "tracksuits|nike tech fleece||light bone white",
+                      "brand":  "Tracksuits",
+                      "model":  "Nike Tech Fleece",
+                      "variant":  "",
+                      "colorway":  "light bone white",
+                      "cover":  "Tracksuits\\Nike Tech Fleece\\light bone white\\0.jpg",
+                      "images":  [
+                                     "Tracksuits\\Nike Tech Fleece\\light bone white\\0.jpg"
+                                 ]
+                  },
+                  {
+                      "id":  "tracksuits|nike tech fleece||navy",
+                      "brand":  "Tracksuits",
+                      "model":  "Nike Tech Fleece",
+                      "variant":  "",
+                      "colorway":  "navy",
+                      "cover":  "Tracksuits\\Nike Tech Fleece\\navy\\0199e7a8-7555-77cb-993d-5ae45a7c0c08_720.jpeg",
+                      "images":  [
+                                     "Tracksuits\\Nike Tech Fleece\\navy\\0199e7a8-7555-77cb-993d-5ae45a7c0c08_720.jpeg"
+                                 ]
+                  },
+                  {
+                      "id":  "tracksuits|nike tech fleece||pink",
+                      "brand":  "Tracksuits",
+                      "model":  "Nike Tech Fleece",
+                      "variant":  "",
+                      "colorway":  "pink",
+                      "cover":  "Tracksuits\\Nike Tech Fleece\\pink\\1.jpg",
+                      "images":  [
+                                     "Tracksuits\\Nike Tech Fleece\\pink\\1.jpg",
+                                     "Tracksuits\\Nike Tech Fleece\\pink\\2.jpeg"
+                                 ]
+                  },
+                  {
+                      "id":  "tracksuits|nike tech fleece||red",
+                      "brand":  "Tracksuits",
+                      "model":  "Nike Tech Fleece",
+                      "variant":  "",
+                      "colorway":  "red",
+                      "cover":  "Tracksuits\\Nike Tech Fleece\\red\\1.jpg",
+                      "images":  [
+                                     "Tracksuits\\Nike Tech Fleece\\red\\1.jpg",
+                                     "Tracksuits\\Nike Tech Fleece\\red\\28457729_58563324_1000.webp"
+                                 ]
+                  },
+                  {
+                      "id":  "tracksuits|nike tech fleece||white",
+                      "brand":  "Tracksuits",
+                      "model":  "Nike Tech Fleece",
+                      "variant":  "",
+                      "colorway":  "white",
+                      "cover":  "Tracksuits\\Nike Tech Fleece\\white\\img0_1200w (1).jpg",
+                      "images":  [
+                                     "Tracksuits\\Nike Tech Fleece\\white\\img0_1200w (1).jpg",
+                                     "Tracksuits\\Nike Tech Fleece\\white\\nike-White-Tech-Fleece-Angular-Seam-joggers.jpg"
+                                 ]
+                  },
+                  {
+                      "id":  "tracksuits|nike tech fleece||yellow",
+                      "brand":  "Tracksuits",
+                      "model":  "Nike Tech Fleece",
+                      "variant":  "",
+                      "colorway":  "yellow",
+                      "cover":  "Tracksuits\\Nike Tech Fleece\\yellow\\nike-mens-sportswear-tech-fleece-windrunner-tracksuit-ii4587-717-ii4595-717_3.jpg",
+                      "images":  [
+                                     "Tracksuits\\Nike Tech Fleece\\yellow\\nike-mens-sportswear-tech-fleece-windrunner-tracksuit-ii4587-717-ii4595-717_3.jpg"
                                  ]
                   }
               ]
